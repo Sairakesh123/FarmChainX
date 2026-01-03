@@ -1,49 +1,40 @@
-# FarmChainX — Blockchain-Powered Agricultural Traceability
+# FarmChainX 🌾
 
-Live Demo: http://localhost:4200  
-Backend: http://localhost:8080
+FarmChainX is a Java-based backend application designed to model a transparent and efficient agricultural supply chain system.  
+The project focuses on managing stakeholders such as farmers, distributors, retailers, and consumers, ensuring traceability and accountability across the food supply lifecycle.
 
-## Sample Accounts (Ready to Login)
+This project was built to understand real-world backend architecture, RESTful APIs, and database interactions using Spring Boot.
 
-| Role         | Email                          | Password | Notes |
-|--------------|--------------------------------|----------|-------|
-| Farmer       | farmer@farmchainx.com          | 1234     | Can upload |
-| Distributor  | distributor@farmchainx.com     | 1234     | Can receive & handover |
-| Retailer     | retailer@farmchainx.com        | 1234     | Can confirm receipt |
-| Consumer     | consumer@farmchainx.com        | 1234     | Can scan & review |
-| Admin        | admin@farmchainx.com           | 1234     | Full access |
+---
 
-All accounts pre-registered in DB via `data.sql`
+## 🚀 Features
 
-## Sample Products Already Uploaded (by farmer)
+- Farmer, Distributor, and Retailer management
+- Product lifecycle tracking from farm to consumer
+- RESTful APIs for supply chain operations
+- Role-based operations
+- Structured layered architecture (Controller, Service, Repository)
+- Exception handling and validation
+- Database persistence using JPA/Hibernate
 
-- Basmati Rice  
-- Red Onion  
-- Alphonso Mango  
-- Organic Tomato  
+---
 
-→ Just scan any QR from `/verify/...` links below
+## 🛠️ Tech Stack
 
-## Quick Demo Flow (Copy-Paste Links)
+- **Language:** Java  
+- **Framework:** Spring Boot  
+- **ORM:** Hibernate / JPA  
+- **Database:** MySQL  
+- **Build Tool:** Maven  
+- **API Testing:** Postman  
+- **IDE:** Visual Studio Code / IntelliJ  
 
-1. **Farmer uploads** → already done  
-2. **Generate QR** → Done (on My Products page)  
-3. **Verify QR** → Click any:  
-   http://localhost:4200/verify/123e4567-e89b-12d3-a456-426614174000  
-   http://localhost:4200/verify/123e4567-e89b-12d3-a456-426614174001  
-4. **Distributor logs in** → Confirm receipt → Final handover to retailer  
-5. **Retailer logs in** → Confirm receipt  
-6. **Consumer scans** → Leaves 5-star review  
-7. **Admin** → Sees everything in Admin Panel
+---
 
-## How to Run
+## 🧱 Project Architecture
 
-```bash
-# Backend (Spring Boot)
-cd backend
-./mvnw spring-boot:run
-
-# Frontend (Angular)
-cd frontend
-npm install
-ng serve --proxy-config proxy.conf.json 
+```text
+Controller Layer  -> Handles HTTP requests
+Service Layer     -> Business logic
+Repository Layer  -> Database operations
+Entity Layer      -> Domain models
